@@ -2,13 +2,17 @@
   "name": "ladbrokes-tech-test",
   "version": "1.0.0",
   "description": "Ladbrokes tech test for junior dev role",
-  "main": "index.js",
+  "main": "Drone.js",
   "scripts": {
     "test": "jest"
   },
   "keywords": [
-    "javascript"
+    "javascript",
+    "jest"
   ],
   "author": "Jamie Davis",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.5.0"
+  }
 }

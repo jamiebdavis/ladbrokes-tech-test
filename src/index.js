@@ -47,7 +47,7 @@ function droneInput(input) {
 
   //complex North // East // South // West
   if (directions[0].toUpperCase() === "N") {
-    //iterate over array to extract "-" or "+" to determine wether done goes forward of backwards
+    //iterate over array to extract "-" or "+" to determine wether done goes forward or backwards
     directions.map(char => {
       if (char === "+") {
         return (coordinatesY += 1);
