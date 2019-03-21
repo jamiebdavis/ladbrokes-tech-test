@@ -1,6 +1,6 @@
 const Drone = require("../src/Drone");
 
-describe("Drone", () => {
+describe("Basic drone functions", () => {
   //drone properties
   it("Can be instanced", () => {
     expect(new Drone()).toBeInstanceOf(Object);
@@ -76,10 +76,91 @@ describe("Drone", () => {
 
     expect(drone.coordinatesX).toEqual(-1);
   });
+});
 
-  //add basic input test One
-  //add basic input test Two
+describe("Drone basic inputs", () => {
+  it("Follow basic directions from scenario.pdf - Example 1", () => {
+    const drone = new Drone();
 
-  //add complex input test One
-  //add complex input test Two
+    drone.droneInput("R++");
+    drone.droneInput("L+++");
+
+    expect(`${String(drone.coordinatesX)},${String(drone.coordinatesY)}`).toBe(
+      "2,3"
+    );
+  });
+  it("Follow basic directions from scenario.pdf - Example 2", () => {
+    const drone = new Drone();
+
+    drone.droneInput("L++");
+    drone.droneInput("R--");
+    drone.droneInput("L+");
+
+    expect(`${String(drone.coordinatesX)},${String(drone.coordinatesY)}`).toBe(
+      "-3,-2"
+    );
+  });
+  it("Follow basic directions from scenario.pdf - Further example 1", () => {
+    const drone = new Drone();
+
+    drone.droneInput("R+");
+    drone.droneInput("L--");
+    drone.droneInput("R+");
+    drone.droneInput("R--");
+    drone.droneInput("L++");
+
+    expect(`${String(drone.coordinatesX)},${String(drone.coordinatesY)}`).toBe(
+      "4,0"
+    );
+  });
+  it("Follow basic directions from scenario.pdf - Further example 2", () => {
+    const drone = new Drone();
+
+    drone.droneInput("L-++");
+    drone.droneInput("L+");
+    drone.droneInput("R+");
+    drone.droneInput("R-");
+    drone.droneInput("L-++");
+    drone.droneInput("R--");
+    drone.droneInput("R-+-");
+    drone.droneInput("L+");
+
+    expect(`${String(drone.coordinatesX)},${String(drone.coordinatesY)}`).toBe(
+      "-4,-3"
+    );
+  });
+});
+
+describe("Drone complex inputs", () => {
+  it("Follow complex directions from scenario.pdf - Example 1", () => {
+    const drone = new Drone();
+
+    drone.droneInput("L+");
+    drone.droneInput("E-");
+    drone.droneInput("R+");
+    drone.droneInput("R+++");
+    drone.droneInput("W-");
+    drone.droneInput("S+");
+    drone.droneInput("N+");
+
+    expect(`${String(drone.coordinatesX)},${String(drone.coordinatesY)}`).toBe(
+      "2,1"
+    );
+  });
+  it("Follow complex directions from scenario.pdf - Example 2", () => {
+    const drone = new Drone();
+
+    drone.droneInput("S-");
+    drone.droneInput("L-");
+    drone.droneInput("S-");
+    drone.droneInput("L+");
+    drone.droneInput("R--+");
+    drone.droneInput("W+");
+    drone.droneInput("L+-+-");
+    drone.droneInput("N+");
+
+    expect(`${String(drone.coordinatesX)},${String(drone.coordinatesY)}`).toBe(
+      "1,2"
+    );
+  });
 });

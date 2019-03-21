@@ -8,7 +8,6 @@ function Drone() {
     //splitting to input in to array
     let directions = input.split("");
 
-    //Might convert into a switch statement
     //Clockwise direction
     if (this.direction === "N" && directions[0].toUpperCase() === "R") {
       return (this.direction = "E");
@@ -36,6 +35,7 @@ function Drone() {
       return (this.direction = "N");
     }
   };
+
   this.droneInput = input => {
     //importing droneDirection function to determine what direction the drone is facing
     this.droneDirection(input);
@@ -64,7 +64,6 @@ function Drone() {
           return this.coordinatesX--;
         }
       });
-      //
     }
     if (directions[0].toUpperCase() === "S") {
       directions.map(char => {
@@ -151,9 +150,8 @@ function Drone() {
       ...this.coordinateHistory,
       `${String(this.coordinatesX)},${String(this.coordinatesY)}`
     ];
-    //returning value as string as it appears on scenario.pdf
 
-    //this.showLocation();  // removed so it doesnt spam console.log
+    //this.showLocation();  // removed so it doesn't spam console.log
     //this.showDirection();
   };
 
@@ -176,16 +174,15 @@ function Drone() {
     }
   };
 
-  this.showLocation = () => {
+  this.showLocation = () =>
     console.log(
       `Drone Coordinates: ${String(this.coordinatesX)},${String(
         this.coordinatesY
       )}`
     );
-  };
-  this.showLocationHistory = () => {
+
+  this.showLocationHistory = () =>
     console.log(`Drone previous coordinates: ${this.coordinateHistory}`);
-  };
 }
 
 module.exports = Drone;
