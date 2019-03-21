@@ -32,14 +32,14 @@ The drone also has the ability to show information such as:
 
 # Instructions
 
-Download from github
+Clone or download from github.
 CD into folder and npm install.
 
-To input both basic and complex problem files into the drone, simple type npm start into the CLI.
+To input both basic and complex problem files into the drone, type npm start into the CLI.
 
 # Testing
 
-Javascript unit testing using Jest
+Javascript unit testing using Jest.
 To test all of the drones features are working type npm test into the CLI.
 
 # Further details
@@ -52,7 +52,7 @@ coordinates within the console.log
 
 Any questions or if you need further instructions, please dont hesitate to contact me.
 
-Kind Regards
+Kind Regards.
 Jamie Davis
 
 jamied1985@gmail.com
