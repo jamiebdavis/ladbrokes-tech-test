@@ -64,6 +64,7 @@ function Drone() {
           return this.coordinatesX--;
         }
       });
+      //
     }
     if (directions[0].toUpperCase() === "S") {
       directions.map(char => {
@@ -151,9 +152,9 @@ function Drone() {
       `${String(this.coordinatesX)},${String(this.coordinatesY)}`
     ];
     //returning value as string as it appears on scenario.pdf
-    //return `${String(this.coordinatesX)},${String(this.coordinatesY)}`;
-    this.showLocation();
-    this.showDirection();
+
+    //this.showLocation();  // removed so it doesnt spam console.log
+    //this.showDirection();
   };
 
   this.showDirection = () => {
