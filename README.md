@@ -6,7 +6,8 @@ This challenge will be completed using javascript & Node.
 
 Jest
 
-#Introduction
+# Introduction
+
 This is a programme to navigate a drone safely through the city.
 The drone will be able to take both basic and complex inputs.
 
@@ -23,16 +24,35 @@ Every new Drone() created will have the ability to:
     -Travel East
     -Travel West
 
-The drone also has the ability to information such as:
+The drone also has the ability to show information such as:
 
     -What direction it is facing
     -Current coordinates
     -Coordinate history.
 
-#Instructions
+# Instructions
+
 Download from github
 CD into folder and npm install.
 
-To input both basic and complex files into the drone, simple type npm start or node index.js into the CLI. <- Need to fix this!!!!
+To input both basic and complex problem files into the drone, simple type npm start into the CLI.
 
 # Testing
+
+Javascript unit testing using Jest
+To test all of the drones features are working type npm test into the CLI.
+
+# Further details
+
+I've added both of the input.txt files to this package.
+Within index.js, i've imported the txt files, saved into an array & imported my Drone constructor.
+
+When called each function within index.js (basicDroneInput() & complexDroneInput()) will loop over each item in the arrays and show the final
+coordinates within the console.log
+
+Any questions or if you need further instructions, please dont hesitate to contact me.
+
+Kind Regards
+Jamie Davis
+
+jamied1985@gmail.com

@@ -1,7 +1,7 @@
-const Drone = require("../src/Drone"); //import drone contructor
+const Drone = require("./src/Drone"); //import drone contructor
 const fs = require("fs");
-const problemBasic = fs.readFileSync("../problem-basic-input.txt", "utf-8");
-const problemComplex = fs.readFileSync("../problem-complex-input.txt", "utf-8");
+const problemBasic = fs.readFileSync("./problem-basic-input.txt", "utf-8");
+const problemComplex = fs.readFileSync("./problem-complex-input.txt", "utf-8");
 
 function basicDroneInput() {
   const basicDrone = new Drone();
